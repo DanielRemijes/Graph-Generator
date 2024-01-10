@@ -81,7 +81,7 @@ function updateChartType(){
 function removeData(datasetIndex, index){
     if(chartData.labels.length>index){
         chartData.labels.splice(index, 1);
-        data.splice(index,1);
+        chartData.datasets[datasetIndex].data.splice(index,1);
         myChart.update();
     }
 }
